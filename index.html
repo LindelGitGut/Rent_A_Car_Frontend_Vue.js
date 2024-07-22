@@ -2,9 +2,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src = "https://unpkg.com/vue@3.0.2"></script>
+    <title>Vue Example</title>
 </head>
 <body>
-    
+
+<h1>Hello Vue!</h1>
+
+<!-- 
+hier verwenden wir die Vue App/Componente im div, unsere Vue "App" kontrolliert nun den bereich mit dir id app -->
+
+<div id="app">
+
+<!-- Hier nutzen wird ein attribut von data() aus app.js, die referenzierung erfolgt durch {{ attributname }}, da wir aber im
+ app.js ein template verwenden wird title hier überschrieben! daher müssen wir im template der "app" diese referenz setzen -->
+
+<p>{{ title }}</p>
+
+
+</div>
+
+
+<script src ="app.js">
+</script>
 </body>
 </html>
