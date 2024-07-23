@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- import vue -->
+<script src="https://unpkg.com/vue@3.0.2"></script>
+  
+<style>
+
+    /* einfachee boxen um methoden zu testen */
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: grey;
+        text-align: center;
+        padding: 50 px;
+        display: inline-block;
+        margin: 20px;
+    }
+    </style>
+</head>
+
+<body>
+
+
+<div id="mouseeventapp">
+
+    <div class="box" @mouseover="mouseOverEvent()">
+         Mouseover (enter)
+    </div>
+
+    <div class="box" @mouseleave="mouseLeaveEvent()">
+        MouseLeave
+    </div>
+
+    <div class="box" @dblclick="doubleClickEvent()">
+        MouseClick (Double)
+    </div>
+
+    <!-- Beispiel um das Event Selbst als parameter zu übergeben -->
+    <!--MouseMoveEvent-->
+    <div class="box" @mousemove="mouseMoveEvent($event)">
+
+        MouseMove: x: {{ x }} / y: {{ y }}
+
+    </div>
+
+
+</div>
+
+    <script src="mouseevent.js"></script>
+
+    
+</body>
+</html>

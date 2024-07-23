@@ -19,6 +19,34 @@ hier verwenden wir die Vue App/Componente im div, unsere Vue "App" kontrolliert 
 
 <p>{{ title }}</p>
 
+<!-- Es gibt v-on directiven welche vue js etwas anweisen, beispiel hierfür wäre v-on:click für einen Klick auf das entsprechende Element,
+ auch hier gilt das der inhalt durch das template überschrieben wird daher müssen wird die buttons im template auslagern, siehe app.js -->
+
+<button v-on:click="age++">Increase Age</button>
+<button v-on:click="age--">Decrease Age</button>
+<!-- Beispiel für den Funktionsaufruf einer in der Komponente vorhandenen Methode (hier changeBookTitle) -->
+
+<button v-on:click="changeBookTitle">Change Book Title</button>
+
+
+<!-- Beispiel für eine if abfrage -->
+
+<div v-if="age >= 50"> You are at least half a century old.</div>
+
+<!-- Beispiel für if bedingung auf click event -->
+<button v-on:click="toggleShowBook">
+    <!-- Hier wird ein ternärer operator verwendet, wenn showBook true ist wird "Hide Book" angezeigt, ansonsten "Show Book" -->
+    <span v-if="showBook">Hide Book</span>
+    <span v-if="!showBook">Show Book</span>
+</button>
+
+
+<!-- visible when showBook, hidden when not-->
+<p v-if='showBook'>
+    {{title}}
+</p>
+
+ 
 
 </div>
 
