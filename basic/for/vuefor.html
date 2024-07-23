@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+</head>
+<body>
+
+    <div id="vueforapp">
+
+        <!-- beispiel für for -->
+
+        <ul>
+            <li v-for="book in books">
+                <p>{{ book }}</p>
+            </li>
+        </ul>
+
+        <!-- man kann auch den index mitgeben -->
+
+        <ul>
+            <li v-for="(book, index) in books">
+                <p>{{ index }}: {{ book }}</p>
+            </li>
+
+        <!-- man kann auch mit den index aus dem array arbeiten ohne for -->
+
+        <p>{{ books[0] }}</p>
+        <p>{{ books[1] }}</p>
+        <p>{{ books[2] }}</p>
+        <p>{{ books[3] }}</p>
+    
+
+
+    </div>
+    <script src="vuefor.js"></script>
+</body>
+</html>

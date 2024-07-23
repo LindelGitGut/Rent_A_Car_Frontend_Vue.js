@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Attributebinding</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+<div id="attributebindingapp">
+
+
+    <!-- Stellen wir uns vor wir haben ein anchor tag mit einem href und der href soll dynamisch sein, also abhängig von einer variable, in diesem fall "url". -->
+    <a href="https://lindele.de">
+        My personal Website
+    </a>
+
+    <br>
+
+    <!-- Nun anstatt die URL hard zu coden können wir auch ein attribut nutzen, daher nutzen wir aus der vue app das attribut "url" und binden es an das href attribut des a tags. -->
+    <!-- Hier ist zu beachten das nicht mit {{}} oder anderen direkten referenzen gearbeitet wird, sondern mit v-bind:href="url", siehe attributebinding js data -->
+    <a v-bind:href="url">
+        My personal Website
+    </a>
+
+    <br>
+
+</div>
+    <script src="attributebindingvue.js"></script>
+</body>
+</html>
