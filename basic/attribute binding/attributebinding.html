@@ -23,6 +23,31 @@
     </a>
 
     <br>
+    
+    <!-- Die kurzform von v-bind ist ein ":" also statt v-bind:href="url"  -->
+    <a :href = "url">
+        My personal Website
+    </a>
+
+    <!-- Das ganze ist auch nicht nur für urls möglich, sondern auch für andere attribute, wie z.b. img src -->
+
+    <img v-bind:src="image" alt="sexy developer">
+
+    <!-- nun können wir auch bücher hinzufügen und die jeweiligen bilder welche im book img attribute sind anzeigen lassen. Beachte :src="book.img" und :alt="book.title" -->
+
+    <ul>
+        <li v-for="book in books">
+            <br>
+            <div style="max-width:min-content; height: auto; margin-left: auto; margin-right: auto; text-align: center;">
+               <h2>{{ book.title }}</h2>
+                <img :src="book.img" :alt="book.title">
+                <br>
+                
+            </div>
+ 
+        </li>
+
+
 
 </div>
     <script src="attributebindingvue.js"></script>

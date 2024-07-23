@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+
+<style>
+/* Diese Klasse wird für Fav genutzt um die logik sichtbar zu machen */
+    .fav {
+        color: red;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+<!-- 
+    Die idee bei dynamischen klassen ist einem html element eine klasse zu verpassen wenn ein bestimmtes attribut z.b. true ist.
+    In unserm beispiel nehmen wir wieder ein array von büchern welche ein attribut isFav haben. Wenn dieses attribut true ist soll die klasse "fav" hinzugefügt werden.
+    Dies wird durch :class ermöglicht. :class ist ein bindungselement welches die klasse hinzufügt wenn das attribut true ist. -->
+<!-- 
+    Syntax ist wie folgt: :class="{klasse: attribut welches true ist}" -->
+
+
+    
+
+    <div id="dynamicclassesapp">
+
+        <li v-for="(book, index) in books" :class="{fav: book.isFav}" @click="toggleFav(index)">
+             {{ book.title }}
+            <br>
+        </li>
+
+<!-- Wenn man nun in der console den nun die einezlnen book elemente ansieht, kann man festellen das die bücher mit isFav die fav (rot) -->
+
+
+<!-- Abschnitt für computed Properties -->
+
+
+<br>
+<br>
+Zeigt nur die favorisierten bücher an:
+<br>
+<br>
+
+<li v-for="(book, index) in filteredBooks">
+    {{ book.title }}
+    </li>
+
+    </div>
+
+
+    
+    <script src ="dynamicclasses.js"></script>
+</body>
+</html>
