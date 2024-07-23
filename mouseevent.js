@@ -24,7 +24,7 @@ data(){
     //Beispiel um das Event selbst als Parameter zu verwenden
     mouseMoveEvent(event){
         console.log("Mousemove");
-        console.log(event);
+        // console.log(event);
 
     //wir nehmen die x und y koordinaten des Mauszeigers innerhalb der box und schreiben diese in data als attribut um später in der box anzuzeigen
         this.x = event.offsetX;
